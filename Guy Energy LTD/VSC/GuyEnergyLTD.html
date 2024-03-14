@@ -4,26 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Project Title</title>
+    <title>Guy Energy Ltd</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about-us">About us</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#sustainability">Sustainability</a></li>
-                <li><a href="#people">People</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact-us">Contact us</a></li>
+    <header class="hero">
+        <div class="hero-background">
+            <!-- Video background -->
+        <video autoplay muted loop id="video-bg">
+            <source src="videos/WindTurbineBackground.mp4" type="video/mp4">
+            <!-- Add additional source tags for different video formats if needed -->
+        </video>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#about-us">About Us</a></li>
+                <li class="nav-item"><a href="#projects">Projects</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <div class="logo-container">
+                    <a href="#home">
+                        <img src="img/companyLogo.png" alt=" Logo">
+                    </a>
+                </div>
+                <li class="nav-item"><a href="#people">People</a></li>
+                <li class="nav-item"><a href="#news">News</a></li>
+                <li class="nav-item"><a href="#contact-us">Contact Us</a></li>
             </ul>
         </nav>
-        <h1>Guy Energy LTD</h1>
-            <h3>"A renewable energy consultancy, specialising in wind energy and delivering innovative project development strategies"</h2>
+
+        <div class="hero-content">
+            <h1>Guy Energy LTD</h1>
+            <h2>"A renewable energy consultancy, specialising in wind energy and delivering innovative project development strategies"</h2>
+        </div>    
     </header>
 
     <main>
