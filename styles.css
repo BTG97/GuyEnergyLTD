@@ -1,0 +1,404 @@
+@font-face {
+    font-family: 'HeaderFont'; /* Specify the desired font-family name */
+    src: url('fonts/HeaderFont.woff') format('woff'); /* Add additional formats if available */
+}
+
+@font-face {
+    font-family: 'SubheaderFont';
+        src: url('fonts/SubheaderFont.woff') format('woff'); /* Add additional formats if available */
+}
+
+@font-face {
+    font-family: 'BodyFont';
+        src: url('fonts/bodyFont.woff') format('woff'); /* Add additional formats if available */
+}
+
+@font-face {
+    font-family: 'LightBodyFont';
+        src: url('fonts/bodyFont.woff') format('woff'); /* Add additional formats if available */
+}
+
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    font-family: 'LightBodyFont', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: black; /* Set default text color for the navbar */
+    font-family: 'BodyFont', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 30px;
+    text-align: center;
+}
+
+.nav-item a {
+    color: #000000; /* Set text color for the navbar links */
+    text-decoration: none;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.logo-container {
+    margin: 0 20px; /* Adjust margins as needed */
+}
+
+.logo-container img {
+    max-width: 100px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative; /* Ensure the header is positioned relatively */
+    height: 100vh; /* Set the height of the header to be the full viewport height */
+    overflow: hidden; /* Hide any content that overflows the header */
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'HeaderFont', sans-serif; /* Use the font-family name declared in @font-face */
+    font-size: 6em;
+    margin-top: 200px;
+    color: #000000;
+}
+.hero-content h2 {
+    font-family: 'SubheaderFont', sans-serif; /* Use the font-family name declared in @font-face */
+    font-size: 1.5em;
+}
+
+.hero-background {
+    position: absolute; /* Position the background absolutely within the header */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Place the background behind other content */
+    overflow: hidden;
+}
+
+.hero-background video {
+    width: 100%; /* Ensure the video fills the entire header */
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire header */
+    opacity: 0.99;
+    filter: contrast(100%)
+}
+
+#introduction {
+    background-color: #c0ccda; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px; /* Add padding to the section */
+    border-top: 1px #000000;
+}
+
+.introduction_container {
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 1px solid #000000; 
+}
+
+.introduction_content {
+    flex: 1;
+    padding-right: 20px; /* Adjust spacing between text and image */
+    margin-top: 20px;
+}
+
+.introduction_image {
+    flex: 1;
+    text-align: center; /* Align image to the right */
+}
+
+.introduction_image img {
+    max-width: 100%; /* Ensure image fills its container */
+}
+
+#flagship {
+    background-color: #f1dbc8; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px; /* Add padding to the section */
+    border-top: 0.5px #000000;
+}
+
+.flagship_container {
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.flagship_image {
+    flex: 1; /* Take up 50% of the space */
+    padding-right: 20px; /* Add spacing between image and content */
+}
+
+.flagship_content {
+    flex: 1; /* Take up 50% of the space */
+    padding-left: 20px; /* Add spacing between image and content */
+}
+
+.flagship_image img {
+    max-width: 100%; /* Ensure image fills its container */
+}
+
+#services {
+    background-color: #c0ccda;
+    padding: 50px 0;
+}
+
+.services {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #000000; /* Add border between columns */
+}
+
+.services_container {
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.services_column1 {
+    flex-direction: column;
+    text-align: center;
+}
+
+.services:last-child {
+    border-right: none; /* Remove border from last column */
+}
+
+.services img {
+    max-width: 100px; /* Adjust max width of logo */
+    margin-bottom: 10px; /* Add margin between logo and text */
+}
+
+#statistics {
+    background-color: #e9e4e4;
+    padding: 50px 0;
+}
+
+.statistics_container {
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statistic {
+    background-color: #e6f5e4;
+    flex: 1;
+    margin-right: 20px; /* Add space between columns */
+    margin-left: 0; /* Set initial margin-left to 0 */
+    z-index: 1;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #171717;
+    overflow: hidden;
+    transition: color .3s, border-color .3s, background .3s, margin-left .5s ease; /* Add margin-left to transition */
+    text-decoration: none; /* Remove underline */
+    color: #171717; /* Default text color */
+}
+
+.statistic:hover {
+    background-color: #171717; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    border-color: #171717; /* Change border color on hover */
+    margin-left: 20px; /* Change margin-left on hover */
+}
+
+.statistics_column1 {
+    flex-direction: column;
+    text-align: center;
+    padding-right: 30px;
+}
+
+.statistic:last-child {
+    margin-right: 0; /* Remove margin from last column */
+}
+
+#news {
+    background-color: #c0ccda;
+    padding: 50px 0;
+}
+
+.news-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #000000; /* Add border between columns */
+}
+
+.news_container {
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.news_column1 {
+    flex-direction: column;
+    text-align: center;
+}
+
+.news-item:last-child {
+    border-right: none; /* Remove border from last column */
+}
+
+footer {
+    background-color: #f1dbc8; /* Set background color for the footer */
+    padding: 20px; /* Add padding to the footer */
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow content to wrap if necessary */
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.company-logo {
+    flex-basis: 100%; /* Take up full width */
+    text-align: right; /* Align the logo to the left */
+    margin-bottom: 20px; /* Add space below the logo */
+}
+
+.contact-info {
+    margin-bottom: 0px;
+    text-align: right; /* Align contact info to the left */
+}
+
+.footer-links {
+    flex-basis: calc(50% - 10px); /* Take up half of the container width with spacing */
+    margin-left: 10px; /* Add spacing between elements */
+    text-align: left; /* Align links to the left */
+    margin-right: 50px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    columns: 2; /* Display links in two columns */
+}
+
+.footer-links ul li {
+    margin-bottom: 10px; /* Add space between links */
+    position: relative; /* Set position relative for the link */
+}
+
+.flink-button {
+    color: #000000; /* Set text color for the footer links */
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative; /* Set position relative for the link */
+    padding-top: 10px;
+}
+
+.flink-button::after {
+    
+}
+
+.flink-button:hover {
+    color: #c0ccda;
+    transition: color .25s;
+}
+
+.button {
+    z-index: 1;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    padding: 0 10px;
+    background-color: transparent;
+    border: 1px solid #171717;
+    font-size: .875em;
+    letter-spacing: .03em;
+    overflow: hidden;
+    transition: color .25s, border-color .25s, background .25s;
+    text-decoration: none; /* Remove underline */
+    color: #171717; /* Default text color */
+}
+
+.button:hover {
+    background-color: #171717; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    border-color: #171717; /* Change border color on hover */
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Change overlay color */
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add transition for opacity */
+}
+
+.button:hover::after {
+    opacity: 0.1; /* Show overlay on hover */
+}
+
+@media (min-width: 990px) {
+    .container {
+        max-width: 1398px;
+    }
+}
+
